@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    color: white;
+}
+
+.container {
+    display: flex;
+    background-color: #e8e7e9 ;
+    color: #000000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding: 50px 60px;
+}
+
+.info {
+    height: 50vh;
+    width: 60vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+}
+
+.name {
+    font-weight: bold;
+    font-family: 'Noto Serif Gujarati', serif;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.about {
+    font-size: 30px;
+}
+
+.moreabout {
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+.img {
+    padding-left: 20px;
+}
+.img img {
+    height: 50vh;
+}
+
+.img img:hover {
+    animation: enlarge 1s 1;
+
+}
+
+
+
+@media screen and (max-width: 319px) {
+    .container {
+        padding: 0;
+        padding-left: 5px;
+    }
+    .info {
+        font-size: 27px;
+    }
+    .about {
+        margin-top: 15px;
+        font-size: 27px;
+        width: 90vw;
+    }
+    .moreabout {
+        width: 89vw;
+    }
+    .img {
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+    .img img {
+        height: 130px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width:450px) {
+    .container {
+        padding: 0;
+        padding-left: 5%;
+    }
+    .info {
+        font-size: 30px;
+    }
+    .about {
+        margin-top: 15px;
+        font-size: 27px;
+        width: 90vw;
+    }
+    .moreabout {
+        width: 89vw;
+    }
+    .img {
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+    .img img {
+        height: 130px;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 650px) {
+    .container {
+        padding: 0;
+        padding-left: 7%;
+        padding-top: 10px;
+    }
+    .img img {
+        height: 30vh;
+    }
+    .info {
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (min-width: 651px) and (max-width: 950px) {
+    .container {
+        padding: 0;
+        padding-left: 7%;
+    }
+    .img img {
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 951px) {
+    .typing {
+        position: relative;
+    }
+    
+    .typing::after {
+        content: '|';
+        position: absolute;
+        right: 0;
+        color: #000000;
+        background-color: #e8e7e9;
+        width: 0%;
+        /* animation: typing 3s steps(19) alternate infinte, */
+                    /* lines 1s infinite;
+                     */
+        animation: typing 3s ease-in, 
+                    lines 1s infinite;
+        animation-timing-function: steps(19, end);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes lines {
+    50% {
+        color: transparent;
+    }
+}
+
+@keyframes enlarge {
+    0% {
+        height: 50vh;
+    }
+    50% {
+        height: 52vh;
+    }
+    100% {
+        height: 50vh;
+    }
+}
